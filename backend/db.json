@@ -1,0 +1,45 @@
+{
+    "cuestionario": [
+        {
+            "id": 1,
+            "nombre": "Cuestionario 1",
+            "descripcion": "Preguntas de comidas"
+        }
+    ],
+    "pregunta": [
+        {
+            "id": 1,
+            "id_cuestionario": 1,
+            "tipo": "MO",
+            "planteo": "cual es tu comida favorita?",
+            "opciones": [
+                {
+                    "id": 1,
+                    "texto": "Pizza"
+                },
+                {
+                    "id": 2,
+                    "texto": "Pasta"
+                },
+                {
+                    "id": 3,
+                    "texto": "Milanesa"
+                }
+            ]
+        }
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "mail": "test@test.com"
+        }
+    ],
+    "respuesta": [
+        {
+            "user": "test@test.com",
+            "id_pregunta": 2,
+            "valor": "Pizza",
+            "hora": "Date.now()"
+        }
+    ]
+}

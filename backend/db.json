@@ -1,45 +1,1085 @@
 {
-    "cuestionario": [
+  "cuestionario": [
+    {
+      "id": "1",
+      "nombre": "Comidas del Mundo",
+      "descripcion": "Cuestionario sobre platos típicos de distintas culturas"
+    },
+    {
+      "id": "2",
+      "nombre": "Bebidas Populares",
+      "descripcion": "Cuestionario sobre bebidas comunes en diferentes países"
+    },
+    {
+      "id": "3",
+      "nombre": "Dulces y Postres",
+      "descripcion": "Preguntas sobre golosinas y postres famosos"
+    },
+    {
+      "id": "4",
+      "nombre": "Comidas Rápidas",
+      "descripcion": "Preguntas sobre fast food y snacks"
+    }
+  ],
+  "pregunta": [
+    {
+      "id": "1",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 1 del cuestionario 1",
+      "opciones": [
         {
-            "id": 1,
-            "nombre": "Cuestionario 1",
-            "descripcion": "Preguntas de comidas"
-        }
-    ],
-    "pregunta": [
+          "id": 1,
+          "texto": "Opción A"
+        },
         {
-            "id": 1,
-            "id_cuestionario": 1,
-            "tipo": "MO",
-            "planteo": "cual es tu comida favorita?",
-            "opciones": [
-                {
-                    "id": 1,
-                    "texto": "Pizza"
-                },
-                {
-                    "id": 2,
-                    "texto": "Pasta"
-                },
-                {
-                    "id": 3,
-                    "texto": "Milanesa"
-                }
-            ]
-        }
-    ],
-    "usuarios": [
+          "id": 2,
+          "texto": "Opción B"
+        },
         {
-            "id": 1,
-            "mail": "test@test.com"
+          "id": 3,
+          "texto": "Opción C"
         }
-    ],
-    "respuesta": [
+      ]
+    },
+    {
+      "id": "2",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 2 del cuestionario 1",
+      "opciones": [
         {
-            "user": "test@test.com",
-            "id_pregunta": 2,
-            "valor": "Pizza",
-            "hora": "Date.now()"
+          "id": 4,
+          "texto": "Opción A"
+        },
+        {
+          "id": 5,
+          "texto": "Opción B"
+        },
+        {
+          "id": 6,
+          "texto": "Opción C"
         }
-    ]
+      ]
+    },
+    {
+      "id": "3",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 3 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 7,
+          "texto": "Opción A"
+        },
+        {
+          "id": 8,
+          "texto": "Opción B"
+        },
+        {
+          "id": 9,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 4 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 10,
+          "texto": "Opción A"
+        },
+        {
+          "id": 11,
+          "texto": "Opción B"
+        },
+        {
+          "id": 12,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 5 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 13,
+          "texto": "Opción A"
+        },
+        {
+          "id": 14,
+          "texto": "Opción B"
+        },
+        {
+          "id": 15,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 6 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 16,
+          "texto": "Opción A"
+        },
+        {
+          "id": 17,
+          "texto": "Opción B"
+        },
+        {
+          "id": 18,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 7 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 19,
+          "texto": "Opción A"
+        },
+        {
+          "id": 20,
+          "texto": "Opción B"
+        },
+        {
+          "id": 21,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 8 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 22,
+          "texto": "Opción A"
+        },
+        {
+          "id": 23,
+          "texto": "Opción B"
+        },
+        {
+          "id": 24,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 9 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 25,
+          "texto": "Opción A"
+        },
+        {
+          "id": 26,
+          "texto": "Opción B"
+        },
+        {
+          "id": 27,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "id_cuestionario": 1,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 10 del cuestionario 1",
+      "opciones": [
+        {
+          "id": 28,
+          "texto": "Opción A"
+        },
+        {
+          "id": 29,
+          "texto": "Opción B"
+        },
+        {
+          "id": 30,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 1 del cuestionario 1"
+    },
+    {
+      "id": "12",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 2 del cuestionario 1"
+    },
+    {
+      "id": "13",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 3 del cuestionario 1"
+    },
+    {
+      "id": "14",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 4 del cuestionario 1"
+    },
+    {
+      "id": "15",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 5 del cuestionario 1"
+    },
+    {
+      "id": "16",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 6 del cuestionario 1"
+    },
+    {
+      "id": "17",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 7 del cuestionario 1"
+    },
+    {
+      "id": "18",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 8 del cuestionario 1"
+    },
+    {
+      "id": "19",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 9 del cuestionario 1"
+    },
+    {
+      "id": "20",
+      "id_cuestionario": 1,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 10 del cuestionario 1"
+    },
+    {
+      "id": "21",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 1 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 31,
+          "texto": "Opción A"
+        },
+        {
+          "id": 32,
+          "texto": "Opción B"
+        },
+        {
+          "id": 33,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 2 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 34,
+          "texto": "Opción A"
+        },
+        {
+          "id": 35,
+          "texto": "Opción B"
+        },
+        {
+          "id": 36,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 3 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 37,
+          "texto": "Opción A"
+        },
+        {
+          "id": 38,
+          "texto": "Opción B"
+        },
+        {
+          "id": 39,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 4 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 40,
+          "texto": "Opción A"
+        },
+        {
+          "id": 41,
+          "texto": "Opción B"
+        },
+        {
+          "id": 42,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 5 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 43,
+          "texto": "Opción A"
+        },
+        {
+          "id": 44,
+          "texto": "Opción B"
+        },
+        {
+          "id": 45,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 6 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 46,
+          "texto": "Opción A"
+        },
+        {
+          "id": 47,
+          "texto": "Opción B"
+        },
+        {
+          "id": 48,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 7 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 49,
+          "texto": "Opción A"
+        },
+        {
+          "id": 50,
+          "texto": "Opción B"
+        },
+        {
+          "id": 51,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 8 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 52,
+          "texto": "Opción A"
+        },
+        {
+          "id": 53,
+          "texto": "Opción B"
+        },
+        {
+          "id": 54,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 9 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 55,
+          "texto": "Opción A"
+        },
+        {
+          "id": 56,
+          "texto": "Opción B"
+        },
+        {
+          "id": 57,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "id_cuestionario": 2,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 10 del cuestionario 2",
+      "opciones": [
+        {
+          "id": 58,
+          "texto": "Opción A"
+        },
+        {
+          "id": 59,
+          "texto": "Opción B"
+        },
+        {
+          "id": 60,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 1 del cuestionario 2"
+    },
+    {
+      "id": "32",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 2 del cuestionario 2"
+    },
+    {
+      "id": "33",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 3 del cuestionario 2"
+    },
+    {
+      "id": "34",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 4 del cuestionario 2"
+    },
+    {
+      "id": "35",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 5 del cuestionario 2"
+    },
+    {
+      "id": "36",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 6 del cuestionario 2"
+    },
+    {
+      "id": "37",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 7 del cuestionario 2"
+    },
+    {
+      "id": "38",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 8 del cuestionario 2"
+    },
+    {
+      "id": "39",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 9 del cuestionario 2"
+    },
+    {
+      "id": "40",
+      "id_cuestionario": 2,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 10 del cuestionario 2"
+    },
+    {
+      "id": "41",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 1 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 61,
+          "texto": "Opción A"
+        },
+        {
+          "id": 62,
+          "texto": "Opción B"
+        },
+        {
+          "id": 63,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 2 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 64,
+          "texto": "Opción A"
+        },
+        {
+          "id": 65,
+          "texto": "Opción B"
+        },
+        {
+          "id": 66,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 3 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 67,
+          "texto": "Opción A"
+        },
+        {
+          "id": 68,
+          "texto": "Opción B"
+        },
+        {
+          "id": 69,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 4 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 70,
+          "texto": "Opción A"
+        },
+        {
+          "id": 71,
+          "texto": "Opción B"
+        },
+        {
+          "id": 72,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 5 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 73,
+          "texto": "Opción A"
+        },
+        {
+          "id": 74,
+          "texto": "Opción B"
+        },
+        {
+          "id": 75,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 6 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 76,
+          "texto": "Opción A"
+        },
+        {
+          "id": 77,
+          "texto": "Opción B"
+        },
+        {
+          "id": 78,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 7 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 79,
+          "texto": "Opción A"
+        },
+        {
+          "id": 80,
+          "texto": "Opción B"
+        },
+        {
+          "id": 81,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 8 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 82,
+          "texto": "Opción A"
+        },
+        {
+          "id": 83,
+          "texto": "Opción B"
+        },
+        {
+          "id": 84,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 9 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 85,
+          "texto": "Opción A"
+        },
+        {
+          "id": 86,
+          "texto": "Opción B"
+        },
+        {
+          "id": 87,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "id_cuestionario": 3,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 10 del cuestionario 3",
+      "opciones": [
+        {
+          "id": 88,
+          "texto": "Opción A"
+        },
+        {
+          "id": 89,
+          "texto": "Opción B"
+        },
+        {
+          "id": 90,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 1 del cuestionario 3"
+    },
+    {
+      "id": "52",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 2 del cuestionario 3"
+    },
+    {
+      "id": "53",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 3 del cuestionario 3"
+    },
+    {
+      "id": "54",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 4 del cuestionario 3"
+    },
+    {
+      "id": "55",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 5 del cuestionario 3"
+    },
+    {
+      "id": "56",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 6 del cuestionario 3"
+    },
+    {
+      "id": "57",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 7 del cuestionario 3"
+    },
+    {
+      "id": "58",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 8 del cuestionario 3"
+    },
+    {
+      "id": "59",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 9 del cuestionario 3"
+    },
+    {
+      "id": "60",
+      "id_cuestionario": 3,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 10 del cuestionario 3"
+    },
+    {
+      "id": "61",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 1 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 91,
+          "texto": "Opción A"
+        },
+        {
+          "id": 92,
+          "texto": "Opción B"
+        },
+        {
+          "id": 93,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 2 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 94,
+          "texto": "Opción A"
+        },
+        {
+          "id": 95,
+          "texto": "Opción B"
+        },
+        {
+          "id": 96,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 3 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 97,
+          "texto": "Opción A"
+        },
+        {
+          "id": 98,
+          "texto": "Opción B"
+        },
+        {
+          "id": 99,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 4 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 100,
+          "texto": "Opción A"
+        },
+        {
+          "id": 101,
+          "texto": "Opción B"
+        },
+        {
+          "id": 102,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 5 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 103,
+          "texto": "Opción A"
+        },
+        {
+          "id": 104,
+          "texto": "Opción B"
+        },
+        {
+          "id": 105,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 6 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 106,
+          "texto": "Opción A"
+        },
+        {
+          "id": 107,
+          "texto": "Opción B"
+        },
+        {
+          "id": 108,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 7 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 109,
+          "texto": "Opción A"
+        },
+        {
+          "id": 110,
+          "texto": "Opción B"
+        },
+        {
+          "id": 111,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 8 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 112,
+          "texto": "Opción A"
+        },
+        {
+          "id": 113,
+          "texto": "Opción B"
+        },
+        {
+          "id": 114,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 9 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 115,
+          "texto": "Opción A"
+        },
+        {
+          "id": 116,
+          "texto": "Opción B"
+        },
+        {
+          "id": 117,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "id_cuestionario": 4,
+      "tipo": "MO",
+      "planteo": "Pregunta MO 10 del cuestionario 4",
+      "opciones": [
+        {
+          "id": 118,
+          "texto": "Opción A"
+        },
+        {
+          "id": 119,
+          "texto": "Opción B"
+        },
+        {
+          "id": 120,
+          "texto": "Opción C"
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 1 del cuestionario 4"
+    },
+    {
+      "id": "72",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 2 del cuestionario 4"
+    },
+    {
+      "id": "73",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 3 del cuestionario 4"
+    },
+    {
+      "id": "74",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 4 del cuestionario 4"
+    },
+    {
+      "id": "75",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 5 del cuestionario 4"
+    },
+    {
+      "id": "76",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 6 del cuestionario 4"
+    },
+    {
+      "id": "77",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 7 del cuestionario 4"
+    },
+    {
+      "id": "78",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 8 del cuestionario 4"
+    },
+    {
+      "id": "79",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 9 del cuestionario 4"
+    },
+    {
+      "id": "80",
+      "id_cuestionario": 4,
+      "tipo": "TEXTO",
+      "planteo": "Pregunta TEXTO 10 del cuestionario 4"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "test@test.com"
+    },
+    {
+      "id": "1d69",
+      "email": "camigonpal2@gmail.com"
+    },
+    {
+      "id": "ac93",
+      "email": "camila.gonzalezp04@gmail.com"
+    },
+    {
+      "id": "773f",
+      "email": "camigonpal.@gmail.com"
+    }
+  ],
+  "respuesta": []
 }

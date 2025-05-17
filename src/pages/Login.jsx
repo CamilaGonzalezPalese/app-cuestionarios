@@ -1,21 +1,24 @@
-import { useNavigate } from "react-router-dom";
+import './Login.css';
+
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
+import { useTheme } from '../context/DarkContext.jsx';
 function Login() {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
-
+    const params = useParams();
+    const { darkMode, toggleTheme } = useTheme();
+    const themeClassFondo = darkMode ? "dark-mode" : "light-mode";
+    const themeClass = darkMode ? 'dark' : 'light';
     async function upSubmit() {
         try {
-            // Buscar usuario por email (GET)
             const response = await fetch(`http://localhost:3000/usuarios?email=${encodeURIComponent(email)}`);
             const data = await response.json();
 
             if (data.length > 0) {
-                // Usuario encontrado, ir a la siguiente página
                 console.log("Login exitoso");
-                navigate("/cuestionarios/:iduser");
+                navigate(`/cuestionarios`);
             } else {
-                // Usuario no encontrado, registrar (POST)
                 const regResponse = await fetch('http://localhost:3000/usuarios', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -23,7 +26,7 @@ function Login() {
                 });
                 const regData = await regResponse.json();
                 console.log("Usuario registrado:", regData);
-                navigate("/cuestionarios");
+                navigate(`/cuestionarios/`);
             }
         } catch (error) {
             console.error('Error:', error);
@@ -31,19 +34,22 @@ function Login() {
     }
     return (
         <>
-            <div>
-                <label>Ingrese correo electrónico</label>
-                <input
-                    className="inpuItem"
-                    type="email"
-                    name="email"
-                    placeholder="Correo electrónico"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                /><br />
-                <button className="boton" onClick={upSubmit}>
-                    Entrar
-                </button>
+            <div className={"login-container " + themeClassFondo}>
+                <form className={"login-form " + themeClass} onSubmit={e => { e.preventDefault(); upSubmit(); }}>
+                    <label className={"labelInput" + themeClass}>Ingrese correo electrónico</label>
+                    <input
+                        className={"inpuItem " + themeClass}
+                        type="email"
+                        name="email"
+                        placeholder="Correo electrónico"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        required
+                    /><br />
+                    <button className="boton" type="submit">
+                        Entrar
+                    </button>
+                </form>
             </div>
         </>
     );

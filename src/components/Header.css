@@ -1,38 +1,26 @@
 /* Header.css */
 .header {
-  position: relative;
-  background-color: white;
-  display: flex;
-  width: 100%;
-  height: 5rem;
-  padding: 0 1%;
+  background-color: #dacaf0;
+  padding:3rem;
+  position: sticky;
   top: 0;
-  left: 0;
-  padding: 20px;
-  align-items: center;
-  justify-content: space-between;
+  border: 2px solid #6f00ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  
 }
 
-.title {
-  display: flex;
+.header .title {
   color: #6f00ff;
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
-  color: #95bcf0;
-  padding-bottom: 0.25rem;
-  border-bottom: 4px solid #95bcf0;
-}
-
-.toggle-button {
+.header .toggle-button {
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 10px 15px;
+  padding: 30px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -40,7 +28,6 @@
 }
 
 .light {
-  background-color: #ffffff;
   color: #000;
 }
 
@@ -49,4 +36,7 @@
   border-color: #555;
   color: #fff;
 }
-
+.toggle-button.dark {
+  background-color: #555;
+  color: #fff;
+}

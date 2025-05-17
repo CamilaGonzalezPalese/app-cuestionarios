@@ -1,0 +1,30 @@
+
+.cuestionario-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 100vh;
+    background: #f5f6fa;
+    flex-direction: column;
+}
+.cuestionario-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 780px;
+    min-width: 320px;
+    min-height: 100px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    flex-direction: column;
+
+}
+.cuestionario-item p {
+    margin-bottom: 1rem;
+
+}

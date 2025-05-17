@@ -3,22 +3,22 @@
     {
       "id": "1",
       "nombre": "Comidas del Mundo",
-      "descripcion": "Cuestionario sobre platos típicos de distintas culturas"
+      "descripcion": "Cuestionario sobre comidas del mundo"
     },
     {
       "id": "2",
       "nombre": "Bebidas Populares",
-      "descripcion": "Cuestionario sobre bebidas comunes en diferentes países"
+      "descripcion": "Cuestionario sobre bebidas populares"
     },
     {
       "id": "3",
       "nombre": "Dulces y Postres",
-      "descripcion": "Preguntas sobre golosinas y postres famosos"
+      "descripcion": "Cuestionario sobre dulces y postres"
     },
     {
       "id": "4",
       "nombre": "Comidas Rápidas",
-      "descripcion": "Preguntas sobre fast food y snacks"
+      "descripcion": "Cuestionario sobre comidas rápidas"
     }
   ],
   "pregunta": [
@@ -26,19 +26,19 @@
       "id": "1",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 1 del cuestionario 1",
+      "planteo": "¿Cuál de estas comidas es típica de México?",
       "opciones": [
         {
           "id": 1,
-          "texto": "Opción A"
+          "texto": "Tacos"
         },
         {
           "id": 2,
-          "texto": "Opción B"
+          "texto": "Sushi"
         },
         {
           "id": 3,
-          "texto": "Opción C"
+          "texto": "Pizza"
         }
       ]
     },
@@ -46,19 +46,19 @@
       "id": "2",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 2 del cuestionario 1",
+      "planteo": "¿Qué país es famoso por el sushi?",
       "opciones": [
         {
-          "id": 4,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Japón"
         },
         {
-          "id": 5,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Italia"
         },
         {
-          "id": 6,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Argentina"
         }
       ]
     },
@@ -66,19 +66,19 @@
       "id": "3",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 3 del cuestionario 1",
+      "planteo": "¿De qué país es típica la lasaña?",
       "opciones": [
         {
-          "id": 7,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Italia"
         },
         {
-          "id": 8,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "India"
         },
         {
-          "id": 9,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Francia"
         }
       ]
     },
@@ -86,19 +86,19 @@
       "id": "4",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 4 del cuestionario 1",
+      "planteo": "¿Qué ingrediente es base en el hummus?",
       "opciones": [
         {
-          "id": 10,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Garbanzos"
         },
         {
-          "id": 11,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Lentejas"
         },
         {
-          "id": 12,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Papa"
         }
       ]
     },
@@ -106,19 +106,19 @@
       "id": "5",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 5 del cuestionario 1",
+      "planteo": "¿Cuál de estas comidas proviene de Perú?",
       "opciones": [
         {
-          "id": 13,
-          "texto": "Opción A"
+          "id": 1,  
+          "texto": "Ceviche"
         },
         {
-          "id": 14,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Goulash"
         },
         {
-          "id": 15,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Curry"
         }
       ]
     },
@@ -126,19 +126,19 @@
       "id": "6",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 6 del cuestionario 1",
+      "planteo": "¿Qué plato se asocia con España?",
       "opciones": [
         {
-          "id": 16,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Paella"
         },
         {
-          "id": 17,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Hamburguesa"
         },
         {
-          "id": 18,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Pho"
         }
       ]
     },
@@ -146,19 +146,19 @@
       "id": "7",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 7 del cuestionario 1",
+      "planteo": "¿Qué fruta es común en la cocina tropical?",
       "opciones": [
         {
-          "id": 19,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Mango"
         },
         {
-          "id": 20,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Manzana"
         },
         {
-          "id": 21,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Uva"
         }
       ]
     },
@@ -166,19 +166,19 @@
       "id": "8",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 8 del cuestionario 1",
+      "planteo": "¿Qué país es conocido por el kimchi?",
       "opciones": [
         {
-          "id": 22,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Corea del Sur"
         },
         {
-          "id": 23,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "China"
         },
         {
-          "id": 24,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Vietnam"
         }
       ]
     },
@@ -186,19 +186,19 @@
       "id": "9",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 9 del cuestionario 1",
+      "planteo": "¿Qué alimento se sirve en una baguette tradicional?",
       "opciones": [
         {
-          "id": 25,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Jamón y queso"
         },
         {
-          "id": 26,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Tofu y arroz"
         },
         {
-          "id": 27,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Carne molida"
         }
       ]
     },
@@ -206,19 +206,19 @@
       "id": "10",
       "id_cuestionario": 1,
       "tipo": "MO",
-      "planteo": "Pregunta MO 10 del cuestionario 1",
+      "planteo": "¿Cuál de estos platillos es árabe?",
       "opciones": [
         {
-          "id": 28,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Falafel"
         },
         {
-          "id": 29,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Sopa miso"
         },
         {
-          "id": 30,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Schnitzel"
         }
       ]
     },
@@ -226,841 +226,841 @@
       "id": "11",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 1 del cuestionario 1"
+      "planteo": "Describe tu comida favorita y cómo se prepara."
     },
     {
       "id": "12",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 2 del cuestionario 1"
+      "planteo": "¿Qué plato tradicional se sirve en las fiestas de tu país?"
     },
     {
       "id": "13",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 3 del cuestionario 1"
+      "planteo": "¿Cuál es tu experiencia con la comida tailandesa?"
     },
     {
       "id": "14",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 4 del cuestionario 1"
+      "planteo": "¿Qué ingredientes usas para preparar una pizza casera?"
     },
     {
       "id": "15",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 5 del cuestionario 1"
+      "planteo": "¿Qué plato internacional te gustaría probar y por qué?"
     },
     {
       "id": "16",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 6 del cuestionario 1"
+      "planteo": "Describe una comida familiar que recuerdes con cariño."
     },
     {
       "id": "17",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 7 del cuestionario 1"
+      "planteo": "¿Qué diferencias notas entre la comida de tu país y la extranjera?"
     },
     {
       "id": "18",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 8 del cuestionario 1"
+      "planteo": "¿Cómo varía la comida según la región de tu país?"
     },
     {
       "id": "19",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 9 del cuestionario 1"
+      "planteo": "¿Qué comida recomendarías a un turista que visita tu país?"
     },
     {
       "id": "20",
       "id_cuestionario": 1,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 10 del cuestionario 1"
+      "planteo": "¿Qué opinas de la comida vegetariana tradicional?"
     },
     {
-      "id": "21",
+      "id": "1",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 1 del cuestionario 2",
+      "planteo": "¿Qué bebida contiene cafeína?",
       "opciones": [
         {
-          "id": 31,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Café"
         },
         {
-          "id": 32,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Agua"
         },
         {
-          "id": 33,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Leche"
         }
       ]
     },
     {
-      "id": "22",
+      "id": "2",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 2 del cuestionario 2",
+      "planteo": "¿Cuál es una bebida típica en Argentina?",
       "opciones": [
         {
-          "id": 34,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Mate"
         },
         {
-          "id": 35,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Té verde"
         },
         {
-          "id": 36,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Coca-Cola"
         }
       ]
     },
     {
-      "id": "23",
+      "id": "3",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 3 del cuestionario 2",
+      "planteo": "¿Qué bebida se elabora con uvas?",
       "opciones": [
         {
-          "id": 37,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Vino"
         },
         {
-          "id": 38,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Jugo de naranja"
         },
         {
-          "id": 39,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Té"
         }
       ]
     },
     {
-      "id": "24",
+      "id": "4",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 4 del cuestionario 2",
+      "planteo": "¿Qué bebida es típica del desayuno inglés?",
       "opciones": [
         {
-          "id": 40,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Té negro"
         },
         {
-          "id": 41,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Cerveza"
         },
         {
-          "id": 42,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Leche de coco"
         }
       ]
     },
     {
-      "id": "25",
+      "id": "5",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 5 del cuestionario 2",
+      "planteo": "¿Cuál es una bebida fermentada?",
       "opciones": [
         {
-          "id": 43,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Kéfir"
         },
         {
-          "id": 44,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Leche"
         },
         {
-          "id": 45,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Agua"
         }
       ]
     },
     {
-      "id": "26",
+      "id": "6",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 6 del cuestionario 2",
+      "planteo": "¿Cuál de estas es una bebida sin alcohol?",
       "opciones": [
         {
-          "id": 46,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Jugo"
         },
         {
-          "id": 47,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Cerveza"
         },
         {
-          "id": 48,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Vino"
         }
       ]
     },
     {
-      "id": "27",
+      "id": "7",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 7 del cuestionario 2",
+      "planteo": "¿Qué bebida es popular en Estados Unidos?",
       "opciones": [
         {
-          "id": 49,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Refresco"
         },
         {
-          "id": 50,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Agua de coco"
         },
         {
-          "id": 51,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Chicha"
         }
       ]
     },
     {
-      "id": "28",
+      "id": "8",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 8 del cuestionario 2",
+      "planteo": "¿Cuál se considera una bebida energética?",
       "opciones": [
         {
-          "id": 52,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Bebida energética"
         },
         {
-          "id": 53,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Agua mineral"
         },
         {
-          "id": 54,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Café descafeinado"
         }
       ]
     },
     {
-      "id": "29",
+      "id": "9",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 9 del cuestionario 2",
+      "planteo": "¿Qué bebida acompaña comúnmente un desayuno continental?",
       "opciones": [
         {
-          "id": 55,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Jugo de naranja"
         },
         {
-          "id": 56,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Soda"
         },
         {
-          "id": 57,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Té chai"
         }
       ]
     },
     {
-      "id": "30",
+      "id": "10",
       "id_cuestionario": 2,
       "tipo": "MO",
-      "planteo": "Pregunta MO 10 del cuestionario 2",
+      "planteo": "¿Qué bebida típica de Asia es conocida por sus burbujas?",
       "opciones": [
         {
-          "id": 58,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Bubble tea"
         },
         {
-          "id": 59,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Agua tónica"
         },
         {
-          "id": 60,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Jugo de manzana"
         }
       ]
     },
     {
-      "id": "31",
+      "id": "11",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 1 del cuestionario 2"
+      "planteo": "Describe cómo preparas una infusión que te guste."
     },
     {
-      "id": "32",
+      "id": "12",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 2 del cuestionario 2"
+      "planteo": "¿Cuál es tu bebida favorita y por qué?"
     },
     {
-      "id": "33",
+      "id": "13",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 3 del cuestionario 2"
+      "planteo": "¿Qué bebida típica se consume en las celebraciones de tu país?"
     },
     {
-      "id": "34",
+      "id": "14",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 4 del cuestionario 2"
+      "planteo": "¿Qué opinas sobre el consumo de bebidas energéticas?"
     },
     {
-      "id": "35",
+      "id": "15",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 5 del cuestionario 2"
+      "planteo": "¿Has probado alguna bebida tradicional de otro país? Descríbela."
     },
     {
-      "id": "36",
+      "id": "16",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 6 del cuestionario 2"
+      "planteo": "¿Qué bebida recomendarías para un día caluroso?"
     },
     {
-      "id": "37",
+      "id": "17",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 7 del cuestionario 2"
+      "planteo": "¿Qué ingredientes lleva una limonada casera?"
     },
     {
-      "id": "38",
+      "id": "18",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 8 del cuestionario 2"
+      "planteo": "¿Con qué bebida acompañas tus comidas?"
     },
     {
-      "id": "39",
+      "id": "19",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 9 del cuestionario 2"
+      "planteo": "¿Qué bebida prepararías para una cita?"
     },
     {
-      "id": "40",
+      "id": "20",
       "id_cuestionario": 2,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 10 del cuestionario 2"
+      "planteo": "¿Cómo afecta la cafeína a tu cuerpo?"
     },
     {
-      "id": "41",
+      "id": "1",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 1 del cuestionario 3",
+      "planteo": "¿Qué postre es típico de Francia?",
       "opciones": [
         {
-          "id": 61,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Crème brûlée"
         },
         {
-          "id": 62,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Dulce de leche"
         },
         {
-          "id": 63,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Churros"
         }
       ]
     },
     {
-      "id": "42",
+      "id": "2",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 2 del cuestionario 3",
+      "planteo": "¿Qué dulce se asocia con Halloween?",
       "opciones": [
         {
-          "id": 64,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Caramelos"
         },
         {
-          "id": 65,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Galletas de Navidad"
         },
         {
-          "id": 66,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Panettone"
         }
       ]
     },
     {
-      "id": "43",
+      "id": "3",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 3 del cuestionario 3",
+      "planteo": "¿Qué ingrediente es esencial en un brownie?",
       "opciones": [
         {
-          "id": 67,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Chocolate"
         },
         {
-          "id": 68,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Queso"
         },
         {
-          "id": 69,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Zanahoria"
         }
       ]
     },
     {
-      "id": "44",
+      "id": "4",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 4 del cuestionario 3",
+      "planteo": "¿Qué fruta suele llevar una tarta de manzana?",
       "opciones": [
         {
-          "id": 70,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Manzana"
         },
         {
-          "id": 71,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Pera"
         },
         {
-          "id": 72,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Ciruela"
         }
       ]
     },
     {
-      "id": "45",
+      "id": "5",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 5 del cuestionario 3",
+      "planteo": "¿Qué postre argentino es muy popular?",
       "opciones": [
         {
-          "id": 73,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Alfajor"
         },
         {
-          "id": 74,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Tiramisú"
         },
         {
-          "id": 75,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Baklava"
         }
       ]
     },
     {
-      "id": "46",
+      "id": "6",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 6 del cuestionario 3",
+      "planteo": "¿Qué se utiliza para decorar un pastel?",
       "opciones": [
         {
-          "id": 76,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Crema"
         },
         {
-          "id": 77,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Pan rallado"
         },
         {
-          "id": 78,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Aceite"
         }
       ]
     },
     {
-      "id": "47",
+      "id": "7",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 7 del cuestionario 3",
+      "planteo": "¿Qué país es famoso por el baklava?",
       "opciones": [
         {
-          "id": 79,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Turquía"
         },
         {
-          "id": 80,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Suecia"
         },
         {
-          "id": 81,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Chile"
         }
       ]
     },
     {
-      "id": "48",
+      "id": "8",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 8 del cuestionario 3",
+      "planteo": "¿Qué ingrediente es común en una gelatina?",
       "opciones": [
         {
-          "id": 82,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Grenetina"
         },
         {
-          "id": 83,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Harina"
         },
         {
-          "id": 84,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Vinagre"
         }
       ]
     },
     {
-      "id": "49",
+      "id": "9",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 9 del cuestionario 3",
+      "planteo": "¿Qué dulce se prepara en Navidad?",
       "opciones": [
         {
-          "id": 85,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Panettone"
         },
         {
-          "id": 86,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Helado"
         },
         {
-          "id": 87,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Flan"
         }
       ]
     },
     {
-      "id": "50",
+      "id": "10",
       "id_cuestionario": 3,
       "tipo": "MO",
-      "planteo": "Pregunta MO 10 del cuestionario 3",
+      "planteo": "¿Qué postre suele comerse frío?",
       "opciones": [
         {
-          "id": 88,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Helado"
         },
         {
-          "id": 89,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Donas"
         },
         {
-          "id": 90,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Tostadas"
         }
       ]
     },
     {
-      "id": "51",
+      "id": "11",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 1 del cuestionario 3"
+      "planteo": "Describe tu postre favorito."
     },
     {
-      "id": "52",
+      "id": "12",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 2 del cuestionario 3"
+      "planteo": "¿Cómo se prepara una torta básica?"
     },
     {
-      "id": "53",
+      "id": "13",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 3 del cuestionario 3"
+      "planteo": "¿Qué recuerdos te trae un dulce específico?"
     },
     {
-      "id": "54",
+      "id": "14",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 4 del cuestionario 3"
+      "planteo": "¿Cuál es el postre típico en cumpleaños?"
     },
     {
-      "id": "55",
+      "id": "15",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 5 del cuestionario 3"
+      "planteo": "¿Has probado postres de otros países? Menciona uno."
     },
     {
-      "id": "56",
+      "id": "16",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 6 del cuestionario 3"
+      "planteo": "¿Qué postres preparas en casa?"
     },
     {
-      "id": "57",
+      "id": "17",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 7 del cuestionario 3"
+      "planteo": "¿Qué dulce prefieres para acompañar el café?"
     },
     {
-      "id": "58",
+      "id": "18",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 8 del cuestionario 3"
+      "planteo": "¿Cómo se hace un flan casero?"
     },
     {
-      "id": "59",
+      "id": "19",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 9 del cuestionario 3"
+      "planteo": "¿Qué ingredientes usas para una gelatina?"
     },
     {
-      "id": "60",
+      "id": "20",
       "id_cuestionario": 3,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 10 del cuestionario 3"
+      "planteo": "¿Qué diferencias hay entre postres fríos y calientes?"
     },
     {
-      "id": "61",
+      "id": "1",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 1 del cuestionario 4",
+      "planteo": "¿Qué comida rápida es común en EE.UU.?",
       "opciones": [
         {
           "id": 91,
-          "texto": "Opción A"
+          "texto": "Hamburguesa"
         },
         {
           "id": 92,
-          "texto": "Opción B"
+          "texto": "Sopa"
         },
         {
           "id": 93,
-          "texto": "Opción C"
+          "texto": "Curry"
         }
       ]
     },
     {
-      "id": "62",
+      "id": "2",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 2 del cuestionario 4",
+      "planteo": "¿Qué suele acompañar a una hamburguesa?",
       "opciones": [
         {
-          "id": 94,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Papas fritas"
         },
         {
-          "id": 95,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Arroz"
         },
         {
-          "id": 96,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Pan dulce"
         }
       ]
     },
     {
-      "id": "63",
+      "id": "3",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 3 del cuestionario 4",
+      "planteo": "¿Qué ingrediente principal tiene un hot dog?",
       "opciones": [
         {
-          "id": 97,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Salchicha"
         },
         {
-          "id": 98,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Carne"
         },
         {
-          "id": 99,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Pollo"
         }
       ]
     },
     {
-      "id": "64",
+      "id": "4",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 4 del cuestionario 4",
+      "planteo": "¿Qué es una pizza?",
       "opciones": [
         {
-          "id": 100,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Masa con ingredientes horneada"
         },
         {
-          "id": 101,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Pan hervido"
         },
         {
-          "id": 102,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Tarta de frutas"
         }
       ]
     },
     {
-      "id": "65",
+      "id": "5",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 5 del cuestionario 4",
+      "planteo": "¿Qué comida rápida es popular en Japón?",
       "opciones": [
         {
-          "id": 103,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Ramen"
         },
         {
-          "id": 104,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Tamales"
         },
         {
-          "id": 105,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Pabellón"
         }
       ]
     },
     {
-      "id": "66",
+      "id": "6",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 6 del cuestionario 4",
+      "planteo": "¿Qué bebida acompaña frecuentemente la comida rápida?",
       "opciones": [
         {
-          "id": 106,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Refresco"
         },
         {
-          "id": 107,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Vino"
         },
         {
-          "id": 108,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Té verde"
         }
       ]
     },
     {
-      "id": "67",
+      "id": "7",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 7 del cuestionario 4",
+      "planteo": "¿Qué tipo de pan se usa en un sándwich?",
       "opciones": [
         {
-          "id": 109,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Pan de molde"
         },
         {
-          "id": 110,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Pan de pita"
         },
         {
-          "id": 111,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Panqueque"
         }
       ]
     },
     {
-      "id": "68",
+      "id": "8",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 8 del cuestionario 4",
+      "planteo": "¿Cuál es un snack salado?",
       "opciones": [
         {
-          "id": 112,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Papas fritas"
         },
         {
-          "id": 113,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Caramelos"
         },
         {
-          "id": 114,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Galletas"
         }
       ]
     },
     {
-      "id": "69",
+      "id": "9",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 9 del cuestionario 4",
+      "planteo": "¿Qué cadena es famosa por su pollo frito?",
       "opciones": [
         {
-          "id": 115,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "KFC"
         },
         {
-          "id": 116,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Domino’s"
         },
         {
-          "id": 117,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Subway"
         }
       ]
     },
     {
-      "id": "70",
+      "id": "10",
       "id_cuestionario": 4,
       "tipo": "MO",
-      "planteo": "Pregunta MO 10 del cuestionario 4",
+      "planteo": "¿Qué contiene comúnmente una empanada?",
       "opciones": [
         {
-          "id": 118,
-          "texto": "Opción A"
+          "id": 1,
+          "texto": "Carne"
         },
         {
-          "id": 119,
-          "texto": "Opción B"
+          "id": 2,
+          "texto": "Jalea"
         },
         {
-          "id": 120,
-          "texto": "Opción C"
+          "id": 3,
+          "texto": "Chocolate"
         }
       ]
     },
     {
-      "id": "71",
+      "id": "11",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 1 del cuestionario 4"
+      "planteo": "¿Cuál es tu comida rápida favorita y por qué?"
     },
     {
-      "id": "72",
+      "id": "12",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 2 del cuestionario 4"
+      "planteo": "Describe una hamburguesa ideal."
     },
     {
-      "id": "73",
+      "id": "13",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 3 del cuestionario 4"
+      "planteo": "¿Qué diferencias hay entre fast food y comida casera?"
     },
     {
-      "id": "74",
+      "id": "14",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 4 del cuestionario 4"
+      "planteo": "¿Cuál fue la última comida rápida que comiste?"
     },
     {
-      "id": "75",
+      "id": "15",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 5 del cuestionario 4"
+      "planteo": "¿Qué opinas del consumo frecuente de snacks?"
     },
     {
-      "id": "76",
+      "id": "16",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 6 del cuestionario 4"
+      "planteo": "¿Cómo prepararías un sándwich saludable?"
     },
     {
-      "id": "77",
+      "id": "17",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 7 del cuestionario 4"
+      "planteo": "¿Qué ingredientes lleva tu pizza favorita?"
     },
     {
-      "id": "78",
+      "id": "18",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 8 del cuestionario 4"
+      "planteo": "¿Qué snack recomendarías para una película?"
     },
     {
-      "id": "79",
+      "id": "19",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 9 del cuestionario 4"
+      "planteo": "¿Comida rápida o tradicional? Da tus razones."
     },
     {
-      "id": "80",
+      "id": "20",
       "id_cuestionario": 4,
       "tipo": "TEXTO",
-      "planteo": "Pregunta TEXTO 10 del cuestionario 4"
+      "planteo": "¿Cómo prepararías papas fritas caseras?"
     }
   ],
   "usuarios": [
@@ -1069,17 +1069,17 @@
       "email": "test@test.com"
     },
     {
-      "id": "1d69",
+      "id": "4ef1",
       "email": "camigonpal2@gmail.com"
-    },
-    {
-      "id": "ac93",
-      "email": "camila.gonzalezp04@gmail.com"
-    },
-    {
-      "id": "773f",
-      "email": "camigonpal.@gmail.com"
     }
   ],
-  "respuesta": []
+  "respuesta": [
+    {
+      "id_opcion": 1,
+      "id_pregunta": 1,
+      "id_usuario": 1,
+      "respuesta": "Tacos",
+      "fecha_creacion": "2023-10-01T12:00:00Z"
+    }
+  ]
 }

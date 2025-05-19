@@ -45,11 +45,8 @@ function Respuestas() {
                 setRespuestaPrevias(previas);
                 setFechaRespuestas(fechas);
 
-                // Inicializar estados para la pregunta actual:
                 const idPregunta = params.id_pregunta;
                 if (previas[idPregunta]) {
-                    // Si la pregunta es MO, setear respuestaMO, si es texto, respuestaTP
-                    // Buscamos el tipo en respuestas:
                     const preguntaActual = data.find(p => String(p.id_pregunta) === String(idPregunta));
                     if (preguntaActual) {
                         if (preguntaActual.id_opcion) setRespuestaMO(preguntaActual.id_opcion);

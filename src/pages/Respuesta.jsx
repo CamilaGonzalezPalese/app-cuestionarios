@@ -98,7 +98,7 @@ function Respuestas() {
                     id_usuario: usuario.id,
                     id_cuestionario: pregunta.id_cuestionario,
                     id_pregunta: pregunta.id,
-                    id_opcion: opcionSeleccionada.id,
+                    id_opcion: opcionSeleccionada?.id,
                     respuesta: textoRespuesta,
                     fecha_respuesta: ahora,
                 }),
@@ -233,7 +233,7 @@ function Respuestas() {
                                         />
                                         <button
                                             disabled={!respuestaTP}
-                                            onClick={() => guardarRespuestaTexto(respuestaTP)}
+                                            onClick={() => guardarRespuestaMO(respuestaTP)}
                                             style={{ marginTop: "10px" }}
                                         >
                                             Responder

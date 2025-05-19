@@ -5,6 +5,7 @@ import './Pregunta.css';
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTheme } from '../context/DarkContext.jsx';
+import { fetchJson } from '../components/utils.js';
 
 function Preguntas() {
     const [cuestionario, setCuestionario] = useState([]); // <- usa location.state
@@ -18,11 +19,18 @@ function Preguntas() {
     const [error, setError] = useState(null);
     const fetchPreguntas = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/pregunta?id_cuestionario=${params.id_cuestionario}`);
-            if (!response.ok) throw new Error("Network response was not ok");
-            const data = await response.json();
-            console.log("Datos recibidos:", data); // <-- aquí
+            const data = await fetchJson(`http://localhost:3000/pregunta?id_cuestionario=${params.id_cuestionario}`);  
             setPreguntas(data);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+    const fetchCuestionarios = async () => {
+        try {
+            const data = await fetchJson(`http://localhost:3000/cuestionario?id=${params.id_cuestionario}`);  
+            setCuestionario(data[0]);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -32,14 +40,17 @@ function Preguntas() {
 
     useEffect(() => {
         fetchPreguntas();
+        fetchCuestionarios();
     }, [params.id_cuestionario]);
 
     const Responder = (id_cuestionario, id_pregunta, tipo) => {
-        navigate(`/cuestionarios/${id_cuestionario}/pregunta/${id_pregunta}/${tipo}`);
+        navigate(`/cuestionarios/${id_cuestionario}/pregunta/${id_pregunta}/`);
     };
     if (loading) return <p>Cargando...</p>;
     if (error) return <p>Error: {error}</p>;
     if (!cuestionario) return <p>No se encontró el cuestionario.</p>;
+        const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0C929', '#C933F0'];
+
     return (
         <>
             {!loading && !error ? (
@@ -52,7 +63,12 @@ function Preguntas() {
 
                         .map((pregunta) =>
                             <div className={'pregunta-item'} key={pregunta.id} onClick={() => Responder(pregunta.id_cuestionario, pregunta.id, pregunta.tipo)}
-                            >
+                            style={{
+                                backgroundColor: colores[pregunta.id_cuestionario % colores.length],
+                                padding: '10px',
+                                margin: '5px',
+                                color: '#fff'
+                            }}>
                                 <p><span>Planteo: </span>{pregunta.planteo}</p>
                                 <p><span>Tipo: </span>{pregunta.tipo}</p>
                             </div>

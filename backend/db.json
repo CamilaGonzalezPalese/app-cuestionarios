@@ -19,16 +19,6 @@
       "id": "4",
       "nombre": "Comidas Rápidas",
       "descripcion": "Cuestionario sobre comidas rápidas"
-    },
-    {
-      "id": "5",
-      "nombre": "Comidas del Mundo",
-      "descripcion": "Cuestionario sobre comidas del mundo"
-    },
-    {
-      "id": "6",
-      "nombre": "Comidas del Mundo",
-      "descripcion": "Cuestionario sobre comidas del mundo"
     }
   ],
   "pregunta": [
@@ -1096,6 +1086,15 @@
       "respuesta": "Tacos",
       "fecha_creacion": "2023-10-01T12:00:00Z",
       "id": "b402"
+    },
+    {
+      "id_usuario": "2f4b",
+      "id_cuestionario": "2",
+      "id_pregunta": "1",
+      "id_opcion": "2",
+      "respuesta": "Agua",
+      "fecha_respuesta": "2025-05-19T23:23:14.736Z",
+      "id": "3b9d"
     }
   ]
 }

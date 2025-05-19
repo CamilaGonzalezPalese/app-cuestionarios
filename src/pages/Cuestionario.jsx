@@ -25,9 +25,9 @@ function Cuestionarios() {
         }
     };
 
-    const MostrarPreguntas = (id_cuestionario) => {
-        try {
-            navigate(`/cuestionarios/${id_cuestionario}`)
+    const MostrarPreguntas = (cuestionario) => {
+    try {
+        navigate(`/cuestionarios/${cuestionario.id}`, { state: cuestionario });
         } catch (err) {
             setError(err.message);
         } finally {
@@ -38,15 +38,24 @@ function Cuestionarios() {
     useEffect(() => {
         fetchCuestionarios();
     }, [params.id_cuestionario, navigate]);
+    
+    const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0C929', '#C933F0'];
     return (
         <>
             {!loading && !error ? (
                 <div className={'cuestionario-container'}>
+                    <h2>Questions</h2>
                     {cuestionarios.map((cuestionario) =>
                         <div
                             className={'cuestionario-item'}
                             key={cuestionario.id}
-                            onClick={() => MostrarPreguntas(cuestionario.id)}
+                            onClick={() => MostrarPreguntas(cuestionario)}
+                            style={{
+                                backgroundColor: colores[cuestionario.id % colores.length],
+                                padding: '10px',
+                                margin: '5px',
+                                color: '#fff'
+                            }}
                         >
                             <p><span>Nombre: </span>{cuestionario.nombre}</p>
                             <br /><br />

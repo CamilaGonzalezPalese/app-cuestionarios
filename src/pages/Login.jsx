@@ -17,6 +17,7 @@ function Login() {
 
             if (data.length > 0) {
                 console.log("Login exitoso");
+                localStorage.setItem("usuario", JSON.stringify(data[0]));
                 navigate(`/cuestionarios`);
             } else {
                 const regResponse = await fetch('http://localhost:3000/usuarios', {
@@ -26,6 +27,7 @@ function Login() {
                 });
                 const regData = await regResponse.json();
                 console.log("Usuario registrado:", regData);
+                localStorage.setItem("usuario", JSON.stringify(regData));
                 navigate(`/cuestionarios/`);
             }
         } catch (error) {

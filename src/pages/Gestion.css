@@ -1,0 +1,76 @@
+.gestion-container {
+  background: #f4f8fb;
+  min-height: 100vh;
+  padding: 2.5rem 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.gestion-container h1 {
+  color: #2451a6;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.gestion-container section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(36, 81, 166, 0.07);
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  max-width: 900px;
+  border-left: 6px solid #2451a6;
+}
+
+.gestion-container h2 {
+  color: #2451a6;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #e3eaf2;
+  padding-bottom: 0.5rem;
+}
+/* 
+.tabla-crud {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.tabla-crud th, .tabla-crud td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e3eaf2;
+  text-align: left;
+}
+
+.tabla-crud th {
+  background: #e3eaf2;
+  color: #2451a6;
+  font-weight: 600;
+}
+
+.tabla-crud tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-crud input, .tabla-crud select {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #b5c9e2;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f7fafd;
+}
+
+.tabla-crud button {
+  background: #2451a6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.1rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tabla-crud button:hover {
+  background: #183a6d;
+} */

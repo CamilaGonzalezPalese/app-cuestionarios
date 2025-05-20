@@ -1,0 +1,3 @@
+body, html, .main-content {
+  overflow: visible; /* o simplemente no pongas overflow */
+}

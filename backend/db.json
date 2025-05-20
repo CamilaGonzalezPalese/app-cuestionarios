@@ -1,24 +1,29 @@
 {
   "cuestionario": [
     {
-      "id": "1",
+      "id": 1,
       "nombre": "Comidas del Mundo",
       "descripcion": "Cuestionario sobre comidas del mundo"
     },
     {
-      "id": "2",
+      "id": 2,
       "nombre": "Bebidas Populares",
       "descripcion": "Cuestionario sobre bebidas populares"
     },
     {
-      "id": "3",
+      "id": 3,
       "nombre": "Dulces y Postres",
       "descripcion": "Cuestionario sobre dulces y postres"
     },
     {
-      "id": "4",
+      "id": 4,
       "nombre": "Comidas Rápidas",
       "descripcion": "Cuestionario sobre comidas rápidas"
+    },
+    {
+      "id": "0627",
+      "nombre": "Nuevo Q",
+      "descripcion": "Si sale numerico el id"
     }
   ],
   "pregunta": [
@@ -1075,6 +1080,18 @@
     {
       "id": "2f4b",
       "email": "x@x"
+    },
+    {
+      "id": "8743",
+      "email": "q@2.c"
+    },
+    {
+      "id": "0b88",
+      "email": "1@2"
+    },
+    {
+      "id": "b7d1",
+      "email": "w@3"
     }
   ],
   "respuesta": [
@@ -1095,6 +1112,24 @@
       "respuesta": "Agua",
       "fecha_respuesta": "2025-05-19T23:23:14.736Z",
       "id": "3b9d"
+    },
+    {
+      "id": "9f25",
+      "id_usuario": "8743",
+      "id_cuestionario": "1",
+      "id_pregunta": "1",
+      "id_opcion": "1",
+      "respuesta": "Tacos",
+      "fecha_respuesta": "2025-05-20T12:58:59.980Z"
+    },
+    {
+      "id": "5e08",
+      "id_usuario": "8743",
+      "id_cuestionario": "1",
+      "id_pregunta": "2",
+      "id_opcion": "2",
+      "respuesta": "Italia",
+      "fecha_respuesta": "2025-05-20T17:25:49.186Z"
     }
   ]
 }

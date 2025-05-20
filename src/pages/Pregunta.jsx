@@ -19,7 +19,7 @@ function Preguntas() {
     const [error, setError] = useState(null);
     const fetchPreguntas = async () => {
         try {
-            const data = await fetchJson(`http://localhost:3000/pregunta?id_cuestionario=${params.id_cuestionario}`);
+            const data = await fetchJson(`/pregunta?id_cuestionario=${params.id_cuestionario}`);
             setPreguntas(data);
         } catch (err) {
             setError(err.message);
@@ -29,7 +29,7 @@ function Preguntas() {
     };
     const fetchCuestionarios = async () => {
         try {
-            const data = await fetchJson(`http://localhost:3000/cuestionario?id=${params.id_cuestionario}`);
+            const data = await fetchJson(`/cuestionario?id=${params.id_cuestionario}`);
             setCuestionario(data[0]);
         } catch (err) {
             setError(err.message);
@@ -49,12 +49,29 @@ function Preguntas() {
     if (loading) return <p>Cargando...</p>;
     if (error) return <p>Error: {error}</p>;
     if (!cuestionario) return <p>No se encontró el cuestionario.</p>;
-    const colores = ['#FF6B6B', '#4ECDC4', '#556270', '#C06C84', '#6C5B7B', '#355C7D', '#FFA726', '#26A69A', '#5C6BC0', '#EF5350'];
+   
+    const colores = [
+        '#b39ddb', // lavanda más fuerte
+        '#9575cd', // violeta medio
+        '#7e57c2', // violeta oscuro
+        '#6f00ff', // violeta intenso
+        '#512da8',  // violeta profundo
+        '#FF6B6B', 
+        '#4ECDC4', 
+        '#556270', 
+        '#C06C84', 
+        '#6C5B7B', 
+        '#355C7D', 
+        '#FFA726', 
+        '#26A69A', 
+        '#5C6BC0', 
+        '#EF5350'
+    ];
+
     return (
         <>
             {!loading && !error ? (
                 <div className={'pregunta-container'}>
-                    <h2>Questions</h2>
                     <h2>Cuestionario: {cuestionario.nombre}</h2>
                     <p><strong>Descripción:</strong> {cuestionario.descripcion}</p>
 

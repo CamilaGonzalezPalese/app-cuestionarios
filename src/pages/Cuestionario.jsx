@@ -2,6 +2,8 @@ import './Cuestionario.css';
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTheme } from '../context/DarkContext.jsx';
+import { TablaCrud } from '../components/TablaCrud';
+import { cuestionarioService } from '../components/utils.js';
 
 function Cuestionarios() {
     const [cuestionarios, setCuestionarios] = useState([]);
@@ -38,12 +40,29 @@ function Cuestionarios() {
     useEffect(() => {
         fetchCuestionarios();
     }, [params.id]);
-    const colores = ['#FF6B6B', '#4ECDC4', '#556270', '#C06C84', '#6C5B7B', '#355C7D', '#FFA726', '#26A69A', '#5C6BC0', '#EF5350'];
+
+    const colores = [
+        '#b39ddb', // lavanda más fuerte
+        '#9575cd', // violeta medio
+        '#7e57c2', // violeta oscuro
+        '#6f00ff', // violeta intenso
+        '#512da8',  // violeta profundo
+        '#FF6B6B',
+        '#4ECDC4',
+        '#556270',
+        '#C06C84',
+        '#6C5B7B',
+        '#355C7D',
+        '#FFA726',
+        '#26A69A',
+        '#5C6BC0',
+        '#EF5350'
+    ];
     return (
         <>
             {!loading && !error ? (
-                <div className={'cuestionario-container'}>
-                    <h2>Questions</h2>
+                <div className={`cuestionario-container ${themeClassFondo}`}>
+
                     {cuestionarios.map((cuestionario) =>
                         <div
                             className={'cuestionario-item'}
@@ -53,7 +72,7 @@ function Cuestionarios() {
                                 backgroundColor: colores[cuestionario.id % colores.length],
                                 padding: '10px',
                                 margin: '5px',
-                                color: '#fff'
+                                color: darkMode ? '#000' : '#fff'
                             }}
                         >
                             <p><span>Nombre: </span>{cuestionario.nombre}</p>

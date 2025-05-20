@@ -19,7 +19,7 @@ function Preguntas() {
     const [error, setError] = useState(null);
     const fetchPreguntas = async () => {
         try {
-            const data = await fetchJson(`http://localhost:3000/pregunta?id_cuestionario=${params.id_cuestionario}`);  
+            const data = await fetchJson(`/pregunta?id_cuestionario=${params.id_cuestionario}`);
             setPreguntas(data);
         } catch (err) {
             setError(err.message);
@@ -29,7 +29,7 @@ function Preguntas() {
     };
     const fetchCuestionarios = async () => {
         try {
-            const data = await fetchJson(`http://localhost:3000/cuestionario?id=${params.id_cuestionario}`);  
+            const data = await fetchJson(`/cuestionario?id=${params.id_cuestionario}`);
             setCuestionario(data[0]);
         } catch (err) {
             setError(err.message);
@@ -49,13 +49,18 @@ function Preguntas() {
     if (loading) return <p>Cargando...</p>;
     if (error) return <p>Error: {error}</p>;
     if (!cuestionario) return <p>No se encontró el cuestionario.</p>;
-        const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0C929', '#C933F0'];
+    const colores = [
+        '#b39ddb', // lavanda más fuerte
+        '#9575cd', // violeta medio
+        '#7e57c2', // violeta oscuro
+        '#6f00ff', // violeta intenso
+        '#512da8'  // violeta profundo
+    ];
 
     return (
         <>
             {!loading && !error ? (
                 <div className={'pregunta-container'}>
-                    <h2>Questions</h2>
                     <h2>Cuestionario: {cuestionario.nombre}</h2>
                     <p><strong>Descripción:</strong> {cuestionario.descripcion}</p>
 
@@ -63,12 +68,12 @@ function Preguntas() {
 
                         .map((pregunta) =>
                             <div className={'pregunta-item'} key={pregunta.id} onClick={() => Responder(pregunta.id_cuestionario, pregunta.id, pregunta.tipo)}
-                            style={{
-                                backgroundColor: colores[pregunta.id_cuestionario % colores.length],
-                                padding: '10px',
-                                margin: '5px',
-                                color: '#fff'
-                            }}>
+                                style={{
+                                    backgroundColor: colores[pregunta.id_cuestionario % colores.length],
+                                    padding: '10px',
+                                    margin: '5px',
+                                    color: '#fff'
+                                }}>
                                 <p><span>Planteo: </span>{pregunta.planteo}</p>
                                 <p><span>Tipo: </span>{pregunta.tipo}</p>
                             </div>

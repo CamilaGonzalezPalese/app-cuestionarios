@@ -6,22 +6,25 @@ import Login from './pages/Login.jsx';
 import Cuestionarios from './pages/Cuestionario.jsx';
 import Preguntas from './pages/Pregunta.jsx';
 import Respuesta from './pages/Respuesta.jsx';
+import Gestion from './pages/Gestion.jsx';
 
 import './App.css'
 
 function App() {
   return (
     <>
-    <ThemeProvider>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/cuestionarios" element={<Cuestionarios />} />
-        
-        <Route path="/cuestionarios/:id_cuestionario" element={<Preguntas />} /> 
-        <Route path="/cuestionarios/:id_cuestionario/pregunta/:id_pregunta" element={<Respuesta />} />
-      </Routes>
-    </ThemeProvider>
+      <ThemeProvider>
+        <Header />
+        <div>
+          <Routes className="main-content">
+            <Route path="/" element={<Login />} />
+            <Route path="/gestion" element={<Gestion />} />
+            <Route path="/cuestionarios" element={<Cuestionarios />} />
+            <Route path="/cuestionarios/:id_cuestionario" element={<Preguntas />} />
+            <Route path="/cuestionarios/:id_cuestionario/pregunta/:id_pregunta" element={<Respuesta />} />
+          </Routes>
+        </div>
+      </ThemeProvider>
     </>
   );
 }

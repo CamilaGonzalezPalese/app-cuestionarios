@@ -1,0 +1,66 @@
+.crud-table {
+  width: 100%;
+}
+
+.crud-table form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.crud-table input,
+.crud-table select {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #b5c9e2;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f7fafd;
+}
+
+.crud-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.crud-button.create {
+  background: #2451a6;
+  color: #fff;
+}
+
+.crud-button.edit {
+  background: #f0c929;
+  color: #2451a6;
+  margin-right: 0.5rem;
+}
+
+.crud-button.delete {
+  background: #e57373;
+  color: #fff;
+}
+
+.crud-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crud-table th,
+.crud-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e3eaf2;
+  text-align: left;
+}
+
+.crud-table th {
+  background: #e3eaf2;
+  color: #2451a6;
+  font-weight: 600;
+}
+
+.crud-table tr:last-child td {
+  border-bottom: none;
+}

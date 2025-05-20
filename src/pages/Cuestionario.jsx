@@ -2,6 +2,8 @@ import './Cuestionario.css';
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTheme } from '../context/DarkContext.jsx';
+import { TablaCrud } from '../components/TablaCrud';
+import { cuestionarioService } from '../components/utils.js';
 
 function Cuestionarios() {
     const [cuestionarios, setCuestionarios] = useState([]);
@@ -26,8 +28,8 @@ function Cuestionarios() {
     };
 
     const MostrarPreguntas = (id_cuestionario) => {
-    try {
-        navigate(`/cuestionarios/${id_cuestionario}`);
+        try {
+            navigate(`/cuestionarios/${id_cuestionario}`);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -38,13 +40,19 @@ function Cuestionarios() {
     useEffect(() => {
         fetchCuestionarios();
     }, [params.id]);
-    
-    const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0C929', '#C933F0'];
+
+   const colores = [
+  '#b39ddb', // violeta pastel (como fondo header)
+  '#9575cd', // lavanda suave
+  '#7e57c2', // lila muy claro
+  '#6f00ff', // azul lavanda claro
+  '#512da8'  // violeta intenso (borde header)
+];
     return (
         <>
             {!loading && !error ? (
-                <div className={'cuestionario-container'}>
-                    <h2>Questions</h2>
+                <div className={`cuestionario-container ${themeClassFondo}`}>
+                    
                     {cuestionarios.map((cuestionario) =>
                         <div
                             className={'cuestionario-item'}
@@ -54,7 +62,7 @@ function Cuestionarios() {
                                 backgroundColor: colores[cuestionario.id % colores.length],
                                 padding: '10px',
                                 margin: '5px',
-                                color: '#fff'
+                                color: darkMode ? '#000' : '#fff'
                             }}
                         >
                             <p><span>Nombre: </span>{cuestionario.nombre}</p>

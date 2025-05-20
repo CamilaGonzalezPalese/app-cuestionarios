@@ -1,0 +1,104 @@
+.respuesta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem 0;
+  background: #f5f6fa;
+}
+
+.respuesta-container.dark-mode {
+  background: #2a2236;
+}
+
+.respuesta-item {
+  background: #dacaf0;
+  border: 2px solid #6f00ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(111, 0, 255, 0.08);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  color: #6f00ff;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+}
+
+.respuesta-container.dark-mode .respuesta-item {
+  background: #3a2e4d;
+  border-color: #b39ddb;
+  color: #fff;
+}
+
+.respuesta-item p {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.respuesta-item input[type="text"] {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid #6f00ff;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-right: 1rem;
+  outline: none;
+  background: #fff;
+  color: #6f00ff;
+  transition: border 0.2s;
+}
+
+.respuesta-container.dark-mode .respuesta-item input[type="text"] {
+  background: #2a2236;
+  color: #fff;
+  border-color: #b39ddb;
+}
+
+.respuesta-item label {
+  font-size: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.respuesta-item input[type="radio"] {
+  accent-color: #6f00ff;
+  margin-right: 0.5rem;
+}
+
+.respuesta-item button {
+  background: #6f00ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.respuesta-item button:disabled {
+  background: #b39ddb;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.respuesta-container.dark-mode .respuesta-item button {
+  background: #b39ddb;
+  color: #2a2236;
+}
+
+.respuesta-info {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  color: #388e3c;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.respuesta-container.dark-mode .respuesta-info {
+  color: #a5d6a7;
+}

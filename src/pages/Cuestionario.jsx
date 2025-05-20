@@ -26,8 +26,8 @@ function Cuestionarios() {
     };
 
     const MostrarPreguntas = (id_cuestionario) => {
-    try {
-        navigate(`/cuestionarios/${id_cuestionario}`);
+        try {
+            navigate(`/cuestionarios/${id_cuestionario}`);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -38,8 +38,7 @@ function Cuestionarios() {
     useEffect(() => {
         fetchCuestionarios();
     }, [params.id]);
-    
-    const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0C929', '#C933F0'];
+    const colores = ['#FF6B6B', '#4ECDC4', '#556270', '#C06C84', '#6C5B7B', '#355C7D', '#FFA726', '#26A69A', '#5C6BC0', '#EF5350'];
     return (
         <>
             {!loading && !error ? (

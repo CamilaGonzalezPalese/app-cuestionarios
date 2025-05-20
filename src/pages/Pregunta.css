@@ -1,4 +1,4 @@
-.pregunta-container{
+.pregunta-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,8 @@
     background: #f5f6fa;
     flex-direction: column;
 }
-.pregunta-item{
+
+.pregunta-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +24,7 @@
     flex-direction: column;
 
 }
+
 .cuestionario-item p {
     margin-bottom: 1rem;
 

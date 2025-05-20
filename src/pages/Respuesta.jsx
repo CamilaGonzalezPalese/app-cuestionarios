@@ -1,25 +1,35 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTheme } from '../context/DarkContext.jsx';
+import { fetchJson } from '../components/utils.js';
 
 function Respuestas() {
     const [respuestas, setRespuestas] = useState([]);
     const [respuestaPrevias, setRespuestaPrevias] = useState({});
     const [fechaRespuestas, setFechaRespuestas] = useState({});
-    const [respuestaMO, setRespuestaMO] = useState(null); // opción múltiple seleccionada actual
-    const [respuestaTP, setRespuestaTP] = useState(""); // texto actual
+    const [respuestaMO, setRespuestaMO] = useState(null);
+    const [respuestaTP, setRespuestaTP] = useState("");
     const { darkMode } = useTheme();
     const params = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    var desfaseHorario = (new Date()).getTimezoneOffset() * 60000;
+    var ahora = (new Date(Date.now() - desfaseHorario)).toISOString().slice(0, -1);
+    const clave = `${params.id_cuestionario}-${params.id_pregunta}`;
+
+    const pregunta = respuestas.find(
+        r => String(r.id) === String(params.id_pregunta) && String(r.id_cuestionario) === String(params.id_cuestionario)
+    );
+
+
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+
 
     useEffect(() => {
         const fetchRespuestas = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/pregunta/`);
-                if (!response.ok) throw new Error("Network response was not ok");
-                const data = await response.json();
-                setRespuestas(data);
+                const dataPreguntas = await fetchJson(`http://localhost:3000/pregunta/`);
+                setRespuestas(dataPreguntas);
             } catch (err) {
                 setError(err.message);
             } finally {
@@ -39,15 +49,19 @@ function Respuestas() {
                 const previas = {};
                 const fechas = {};
                 data.forEach(r => {
-                    previas[r.id_pregunta] = r.id_opcion || r.respuesta || "";
-                    fechas[r.id_pregunta] = r.fecha_respuesta;
+                    const clave = `${r.id_cuestionario}-${r.id_pregunta}`;
+                    previas[clave] = r.id_opcion || r.respuesta || "";
+                    fechas[clave] = r.fecha_respuesta;
                 });
                 setRespuestaPrevias(previas);
                 setFechaRespuestas(fechas);
 
-                const idPregunta = params.id_pregunta;
-                if (previas[idPregunta]) {
-                    const preguntaActual = data.find(p => String(p.id_pregunta) === String(idPregunta));
+                const claveActual = `${params.id_cuestionario}-${params.id_pregunta}`;
+                if (previas[claveActual]) {
+                    const preguntaActual = data.find(p =>
+                        String(p.id_pregunta) === String(params.id_pregunta) &&
+                        String(p.id_cuestionario) === String(params.id_cuestionario)
+                    );
                     if (preguntaActual) {
                         if (preguntaActual.id_opcion) setRespuestaMO(preguntaActual.id_opcion);
                         else setRespuestaTP(preguntaActual.respuesta);
@@ -60,30 +74,27 @@ function Respuestas() {
 
         fetchRespuestas();
         cargarRespuestasUsuario();
-    }, [params.id_pregunta]);
+    }, [params.id_pregunta, params.id_cuestionario]);
+    async function respuestaExistenteGuardada() {
 
+        const checkRes = await fetch(`http://localhost:3000/respuesta?id_usuario=${usuario.id}&id_pregunta=${params.id_pregunta}`);
+        if (!checkRes.ok) throw new Error("No se pudo verificar si la respuesta ya existe");
+
+        const todasRespuestas = await checkRes.json();
+        const respuestaExistente = todasRespuestas.find(
+            r => r.id_usuario === usuario.id && r.id_pregunta === Number(params.id_pregunta) && r.id_cuestionario === Number(params.id_cuestionario)
+        );
+        return respuestaExistente
+    }
     async function guardarRespuestaMO(idOpcion) {
         try {
-            const ahora = new Date().toISOString();
 
-            // Buscar pregunta ya cargada que coincide con cuestionario y pregunta
-            const pregunta = respuestas.find(
-                r => String(r.id) === String(params.id_pregunta) && String(r.id_cuestionario) === String(params.id_cuestionario)
-            );
-            if (!pregunta) throw new Error("Pregunta no encontrada o no pertenece al cuestionario");
-
-            const usuario = JSON.parse(localStorage.getItem("usuario"));
+            if (!pregunta) throw new Error("Pregunta no encontrada");
             if (!usuario) throw new Error("Usuario no encontrado en sesión");
-
             const opcionSeleccionada = pregunta.opciones.find(op => op.id === idOpcion);
             const textoRespuesta = opcionSeleccionada ? opcionSeleccionada.texto : "";
 
-            const checkRes = await fetch(`http://localhost:3000/respuesta?id_usuario=${usuario.id}&id_pregunta=${params.id_pregunta}`);
-            if (!checkRes.ok) throw new Error("No se pudo verificar si la respuesta ya existe");
-
-            const todasRespuestas = await checkRes.json();
-            const respuestasExistentes = todasRespuestas.filter(r => r.id_usuario === usuario.id && r.id_pregunta === params.id_pregunta);
-            const respuestaExistente = respuestasExistentes[0];
+            const respuestaExistente = await respuestaExistenteGuardada();
 
             const url = respuestaExistente
                 ? `http://localhost:3000/respuesta/${respuestaExistente.id}`
@@ -109,8 +120,8 @@ function Respuestas() {
                 throw new Error(`Error del servidor: ${res.status} - ${texto}`);
             }
 
-            setRespuestaPrevias(prev => ({ ...prev, [pregunta.id]: opcionSeleccionada.id }));
-            setFechaRespuestas(prev => ({ ...prev, [pregunta.id]: ahora }));
+            setRespuestaPrevias(prev => ({ ...prev, [clave]: opcionSeleccionada.id }));
+            setFechaRespuestas(prev => ({ ...prev, [clave]: ahora }));
             setRespuestaMO(opcionSeleccionada.id);
 
             console.log("Respuesta guardada o actualizada correctamente");
@@ -121,24 +132,11 @@ function Respuestas() {
 
     async function guardarRespuestaTexto(texto) {
         try {
-            var tzoffset = (new Date()).getTimezoneOffset() * 60000;
-            var ahora = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
-
-            const responsePregunta = await fetch(`http://localhost:3000/pregunta/${params.id_pregunta}`);
-            if (!responsePregunta.ok) throw new Error("No se pudo obtener la pregunta");
-            const pregunta = respuestas.find(
-                r => String(r.id) === String(params.id_pregunta) && String(r.id_cuestionario) === String(params.id_cuestionario)
-            );
-
-            const usuario = JSON.parse(localStorage.getItem("usuario"));
+            if (!pregunta) throw new Error("Pregunta no encontrada");
             if (!usuario) throw new Error("Usuario no encontrado en sesión");
 
-            const checkRes = await fetch(`http://localhost:3000/respuesta?id_usuario=${usuario.id}&id_pregunta=${params.id_pregunta}`);
-            if (!checkRes.ok) throw new Error("No se pudo verificar si la respuesta ya existe");
+            const respuestaExistente = await respuestaExistenteGuardada();
 
-            const todasRespuestas = await checkRes.json();
-            const respuestasExistentes = todasRespuestas.filter(r => r.id_usuario === usuario.id && r.id_pregunta === params.id_pregunta);
-            const respuestaExistente = respuestasExistentes[0];
 
             const url = respuestaExistente
                 ? `http://localhost:3000/respuesta/${respuestaExistente.id}`
@@ -163,19 +161,16 @@ function Respuestas() {
                 throw new Error(`Error del servidor: ${res.status} - ${texto}`);
             }
 
-            // Actualizar estado local
-            setRespuestaPrevias(prev => ({ ...prev, [pregunta.id]: texto }));
-            setFechaRespuestas(prev => ({ ...prev, [pregunta.id]: ahora }));
+            setRespuestaPrevias(prev => ({ ...prev, [clave]: texto }));
+            setFechaRespuestas(prev => ({ ...prev, [clave]: ahora }));
             setRespuestaTP(texto);
 
             console.log("Respuesta guardada o actualizada correctamente");
-
         } catch (err) {
             console.error("Error actualizando la respuesta:", err.message);
         }
     }
 
-    // Filtrar preguntas según params
     const respuestasFiltradas = respuestas.filter(
         r =>
             String(r.id_cuestionario) === String(params.id_cuestionario) &&
@@ -187,75 +182,77 @@ function Respuestas() {
             {!loading && !error ? (
                 <div className={`respuesta-container ${darkMode ? "dark-mode" : "light-mode"}`} style={{ position: "relative" }}>
                     {respuestasFiltradas.length > 0 ? (
-                        respuestasFiltradas.map(respuesta => (
-                            <div className="respuesta-item" key={respuesta.id} style={{ marginBottom: "1.5rem", position: "relative" }}>
-                                <p><strong>Planteo:</strong> {respuesta.planteo}</p>
+                        respuestasFiltradas.map(respuesta => {
+                            const clave = `${respuesta.id_cuestionario}-${respuesta.id}`;
+                            return (
+                                <div className="respuesta-item" key={respuesta.id} style={{ marginBottom: "1.5rem", position: "relative" }}>
+                                    <p><strong>Planteo:</strong> {respuesta.planteo}</p>
 
-                                {respuesta.tipo === "MO" && (
-                                    <div>
-                                        {respuesta.opciones.map(opcion => (
-                                            <div key={opcion.id}>
-                                                <label>
-                                                    <input
-                                                        type="radio"
-                                                        name={`respuesta_${respuesta.id}`}
-                                                        value={opcion.id}
-                                                        checked={respuestaMO === opcion.id || respuestaPrevias[respuesta.id] === opcion.id}
-                                                        onChange={() => {
-                                                            setRespuestaMO(opcion.id);
-                                                            setRespuestaPrevias(prev => ({ ...prev, [respuesta.id]: opcion.id }));
-                                                        }}
-                                                    />
-                                                    {opcion.texto}
-                                                </label>
-                                            </div>
-                                        ))}
-                                        <button
-                                            disabled={!respuestaMO}
-                                            onClick={() => guardarRespuestaMO(respuestaMO)}
-                                            style={{ marginTop: "10px" }}
-                                        >
-                                            Responder
-                                        </button>
-                                    </div>
-                                )}
+                                    {respuesta.tipo === "MO" && (
+                                        <div>
+                                            {respuesta.opciones.map(opcion => (
+                                                <div key={opcion.id}>
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            name={`respuesta_${respuesta.id}`}
+                                                            value={opcion.id}
+                                                            checked={respuestaMO === opcion.id || respuestaPrevias[clave] === opcion.id}
+                                                            onChange={() => {
+                                                                setRespuestaMO(opcion.id);
+                                                                setRespuestaPrevias(prev => ({ ...prev, [clave]: opcion.id }));
+                                                            }}
+                                                        />
+                                                        {opcion.texto}
+                                                    </label>
+                                                </div>
+                                            ))}
+                                            <button
+                                                disabled={!respuestaMO}
+                                                onClick={() => guardarRespuestaMO(respuestaMO)}
+                                                style={{ marginTop: "10px" }}
+                                            >
+                                                Responder
+                                            </button>
+                                        </div>
+                                    )}
 
-                                {respuesta.tipo === "TEXTO" && (
-                                    <div>
-                                        <input
-                                            type="text"
-                                            placeholder="Agregue respuesta"
-                                            value={respuestaTP || respuestaPrevias[respuesta.id] || ""}
-                                            onChange={(e) => {
-                                                setRespuestaTP(e.target.value);
-                                                setRespuestaPrevias(prev => ({ ...prev, [respuesta.id]: e.target.value }));
-                                            }}
-                                        />
-                                        <button
-                                            disabled={!respuestaTP}
-                                            onClick={() => guardarRespuestaMO(respuestaTP)}
-                                            style={{ marginTop: "10px" }}
-                                        >
-                                            Responder
-                                        </button>
-                                    </div>
-                                )}
+                                    {respuesta.tipo === "TEXTO" && (
+                                        <div>
+                                            <input
+                                                type="text"
+                                                placeholder="Agregue respuesta"
+                                                value={respuestaTP || respuestaPrevias[clave] || ""}
+                                                onChange={(e) => {
+                                                    setRespuestaTP(e.target.value);
+                                                    setRespuestaPrevias(prev => ({ ...prev, [clave]: e.target.value }));
+                                                }}
+                                            />
+                                            <button
+                                                disabled={!respuestaTP}
+                                                onClick={() => guardarRespuestaTexto(respuestaTP)}
+                                                style={{ marginTop: "10px" }}
+                                            >
+                                                Responder
+                                            </button>
+                                        </div>
+                                    )}
 
-                                {fechaRespuestas[respuesta.id] && (
-                                    <div className="respuesta-info" style={{
-                                        position: "absolute",
-                                        top: "10px",
-                                        right: "10px",
-                                        color: "green",
-                                        fontWeight: "bold",
-                                        fontSize: "0.9rem"
-                                    }}>
-                                        Respondida: {new Date(fechaRespuestas[respuesta.id]).toLocaleString()}
-                                    </div>
-                                )}
-
-                            </div>
-                        ))
+                                    {fechaRespuestas[clave] && (
+                                        <div className="respuesta-info" style={{
+                                            position: "absolute",
+                                            top: "10px",
+                                            right: "10px",
+                                            color: "green",
+                                            fontWeight: "bold",
+                                            fontSize: "0.9rem"
+                                        }}>
+                                            Respondida: {new Date(fechaRespuestas[clave]).toLocaleString()}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })
                     ) : (
                         <p>No hay preguntas para mostrar.</p>
                     )}

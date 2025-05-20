@@ -1,5 +1,4 @@
-
-.cuestionario-container{
+.cuestionario-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +7,8 @@
     background: #f5f6fa;
     flex-direction: column;
 }
-.cuestionario-item{
+
+.cuestionario-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,7 @@
     font-size: 1.5rem;
 
 }
+
 .cuestionario-item p {
     margin-bottom: 1rem;
 

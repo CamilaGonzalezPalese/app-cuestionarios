@@ -19,7 +19,7 @@ function Preguntas() {
     const [error, setError] = useState(null);
     const fetchPreguntas = async () => {
         try {
-            const data = await fetchJson(`http://localhost:3000/pregunta?id_cuestionario=${params.id_cuestionario}`);  
+            const data = await fetchJson(`http://localhost:3000/pregunta?id_cuestionario=${params.id_cuestionario}`);
             setPreguntas(data);
         } catch (err) {
             setError(err.message);
@@ -29,7 +29,7 @@ function Preguntas() {
     };
     const fetchCuestionarios = async () => {
         try {
-            const data = await fetchJson(`http://localhost:3000/cuestionario?id=${params.id_cuestionario}`);  
+            const data = await fetchJson(`http://localhost:3000/cuestionario?id=${params.id_cuestionario}`);
             setCuestionario(data[0]);
         } catch (err) {
             setError(err.message);
@@ -49,8 +49,7 @@ function Preguntas() {
     if (loading) return <p>Cargando...</p>;
     if (error) return <p>Error: {error}</p>;
     if (!cuestionario) return <p>No se encontró el cuestionario.</p>;
-        const colores = ['#FF5733', '#33FF57', '#3357FF', '#F0C929', '#C933F0'];
-
+    const colores = ['#FF6B6B', '#4ECDC4', '#556270', '#C06C84', '#6C5B7B', '#355C7D', '#FFA726', '#26A69A', '#5C6BC0', '#EF5350'];
     return (
         <>
             {!loading && !error ? (
@@ -63,12 +62,12 @@ function Preguntas() {
 
                         .map((pregunta) =>
                             <div className={'pregunta-item'} key={pregunta.id} onClick={() => Responder(pregunta.id_cuestionario, pregunta.id, pregunta.tipo)}
-                            style={{
-                                backgroundColor: colores[pregunta.id_cuestionario % colores.length],
-                                padding: '10px',
-                                margin: '5px',
-                                color: '#fff'
-                            }}>
+                                style={{
+                                    backgroundColor: colores[pregunta.id_cuestionario % colores.length],
+                                    padding: '10px',
+                                    margin: '5px',
+                                    color: '#fff'
+                                }}>
                                 <p><span>Planteo: </span>{pregunta.planteo}</p>
                                 <p><span>Tipo: </span>{pregunta.tipo}</p>
                             </div>

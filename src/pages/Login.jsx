@@ -48,7 +48,7 @@ function Login() {
                         onChange={e => setEmail(e.target.value)}
                         required
                     /><br />
-                    <button className="boton" type="submit">
+                    <button className="botonEntrar" type="submit">
                         Entrar
                     </button>
                 </form>

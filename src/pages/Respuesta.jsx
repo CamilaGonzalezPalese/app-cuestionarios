@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTheme } from '../context/DarkContext.jsx';
 import { fetchJson } from '../components/utils.js';
-
+import './Respuesta.css';
 function Respuestas() {
     const [respuestas, setRespuestas] = useState([]);
     const [respuestaPrevias, setRespuestaPrevias] = useState({});

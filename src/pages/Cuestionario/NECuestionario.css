@@ -1,0 +1,55 @@
+.nuevo-cuestionario-container {
+    padding: 0 3rem;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nuevo-cuestionario-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.nuevo-cuestionario-header svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nuevo-cuestionario-form {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.nuevo-cuestionario-input,
+.nuevo-cuestionario-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #b39ddb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background: #faf7fd;
+    resize: none;
+}
+
+.nuevo-cuestionario-input:focus,
+.nuevo-cuestionario-textarea:focus {
+    border-color: #7c43bd;
+    outline: none;
+}

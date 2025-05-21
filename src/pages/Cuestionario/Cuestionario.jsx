@@ -1,7 +1,7 @@
 import './Cuestionario.css';
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useTheme } from '../context/DarkContext.jsx';
+import { useTheme } from '../../context/DarkContext.jsx';
 
 function Cuestionarios() {
     const [cuestionarios, setCuestionarios] = useState([]);
@@ -12,6 +12,7 @@ function Cuestionarios() {
     const themeClass = darkMode ? 'dark' : 'light';
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const colores = ['#FF6B6B', '#4ECDC4', '#556270', '#C06C84', '#6C5B7B', '#355C7D', '#FFA726', '#26A69A', '#5C6BC0', '#EF5350'];
     const fetchCuestionarios = async () => {
         try {
             const response = await fetch(`http://localhost:3000/cuestionario`);
@@ -38,12 +39,42 @@ function Cuestionarios() {
     useEffect(() => {
         fetchCuestionarios();
     }, [params.id]);
-    const colores = ['#FF6B6B', '#4ECDC4', '#556270', '#C06C84', '#6C5B7B', '#355C7D', '#FFA726', '#26A69A', '#5C6BC0', '#EF5350'];
+
+    function CrearNuevo() {
+        try {
+            navigate(`/cuestionarios/NuevoCuestionario`);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    }
+    function EditarCuestionario(id_cuestionario) {
+        try {
+            navigate(`/cuestionarios/${id_cuestionario}/EditarCuestionario`);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    }
+    function volverLogin() {
+        navigate('/');
+    };
     return (
         <>
             {!loading && !error ? (
                 <div className={'cuestionario-container'}>
-                    <h2>Questions</h2>
+                    <div className="cuestionario-header">
+                        <h2>Questions</h2>
+                        <button className="botones" onClick={CrearNuevo}>Nuevo cuestionario</button>
+                    </div>
+                    <button
+                        className="btn-volver"
+                        onClick={() => volverLogin()}
+                    >
+                        🔙
+                    </button>
                     {cuestionarios.map((cuestionario) =>
                         <div
                             className={'cuestionario-item'}
@@ -59,6 +90,15 @@ function Cuestionarios() {
                             <p><span>Nombre: </span>{cuestionario.nombre}</p>
                             <br /><br />
                             <p><span>Descripcion: </span>{cuestionario.descripcion}</p>
+                            <button
+                                className="nuevo-cuestionario-btn"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    EditarCuestionario(cuestionario.id);
+                                }}
+                            >
+                                Editar cuestionario
+                            </button>
                         </div>
                     )}
                 </div>

@@ -2,12 +2,12 @@
   "cuestionario": [
     {
       "id": "1",
-      "nombre": "Comidas del Mundo",
-      "descripcion": "Cuestionario sobre comidas del mundo"
+      "nombre": "Comidas del Mundos",
+      "descripcion": "Cuestionario sobre comidas del mundosssss"
     },
     {
       "id": "2",
-      "nombre": "Bebidas Populares",
+      "nombre": "Bebidas Popularessss",
       "descripcion": "Cuestionario sobre bebidas populares"
     },
     {
@@ -19,6 +19,21 @@
       "id": "4",
       "nombre": "Comidas Rápidas",
       "descripcion": "Cuestionario sobre comidas rápidas"
+    },
+    {
+      "id": "e3eb",
+      "nombre": "ccc",
+      "descripcion": "ccccc"
+    },
+    {
+      "id": 5,
+      "nombre": "vcvc",
+      "descripcion": "vcvc"
+    },
+    {
+      "id": 5,
+      "nombre": "nuevo cuest",
+      "descripcion": "nuevo cuestionario"
     }
   ],
   "pregunta": [
@@ -26,7 +41,7 @@
       "id": "1",
       "id_cuestionario": "1",
       "tipo": "MO",
-      "planteo": "¿Cuál de estas comidas es típica de México?",
+      "planteo": "¿Cuál de estas comidas es típica de México?sss",
       "opciones": [
         {
           "id": "1",
@@ -226,7 +241,13 @@
       "id": "11",
       "id_cuestionario": "1",
       "tipo": "TEXTO",
-      "planteo": "Describe tu comida favorita y cómo se prepara."
+      "planteo": "Describe tu comida favorita y cómo se prepara.sss",
+      "opciones": [
+        {
+          "id": "1",
+          "texto": ""
+        }
+      ]
     },
     {
       "id": "12",
@@ -1061,6 +1082,26 @@
       "id_cuestionario": "4",
       "tipo": "TEXTO",
       "planteo": "¿Cómo prepararías papas fritas caseras?"
+    },
+    {
+      "id": 11,
+      "id_cuestionario": "5",
+      "tipo": "TEXTO",
+      "planteo": "cccc",
+      "opciones": [
+        {
+          "id": "1",
+          "texto": "44656"
+        },
+        {
+          "id": "2",
+          "texto": ""
+        },
+        {
+          "id": "3",
+          "texto": ""
+        }
+      ]
     }
   ],
   "usuarios": [
@@ -1075,6 +1116,10 @@
     {
       "id": "2f4b",
       "email": "x@x"
+    },
+    {
+      "id": "0e3d",
+      "email": "k@k"
     }
   ],
   "respuesta": [
@@ -1095,6 +1140,24 @@
       "respuesta": "Agua",
       "fecha_respuesta": "2025-05-19T23:23:14.736Z",
       "id": "3b9d"
+    },
+    {
+      "id": "29dd",
+      "id_usuario": "0e3d",
+      "id_cuestionario": "1",
+      "id_pregunta": "1",
+      "id_opcion": "2",
+      "respuesta": "Sushi",
+      "fecha_respuesta": "2025-05-21T02:05:55.839"
+    },
+    {
+      "id": "213e",
+      "id_usuario": "0e3d",
+      "id_cuestionario": "1",
+      "id_pregunta": "1",
+      "id_opcion": "3",
+      "respuesta": "Pizza",
+      "fecha_respuesta": "2025-05-21T02:05:58.974"
     }
   ]
 }

@@ -31,3 +31,19 @@
     margin-bottom: 1rem;
 
 }
+
+.cuestionario-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el h2 */
+}
+
+.cuestionario-header h2 {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}

@@ -23,18 +23,52 @@ body {
   position: relative;
 
 }
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  place-content:center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: #f5f6fa;
-  flex-direction: column;
+.botones {
+  position: absolute;
+  right: 0;
+  top: 80%;
+  transform: translateY(-50%);
+  background-color: #b39ddb;
+  color: #2d0344;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
+.botones:hover {
+  background-color: #9575cd;
+}
+.nuevo-cuestionario-btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #b39ddb;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+    
+}
+
+.nuevo-cuestionario-btn:hover {
+    background-color: #7c43bd;
+}
+
+.btn-volver {
+    font-size: 1.5em; /* Proporcional al texto */
+    padding: 0.3em 0.7em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-volver:hover {
+    background: #f0f0f0;
+}
 /*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

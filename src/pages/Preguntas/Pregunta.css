@@ -27,5 +27,18 @@
 
 .cuestionario-item p {
     margin-bottom: 1rem;
+}
 
+.botonNp {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translateY(-50%);
+    background-color: #b39ddb;
+    color: #2d0344;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
 }
